@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="32dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUOTIFY"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="300dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:src="@drawable/quoteimg"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="10dp"
+            android:text="Genius is one percent inspiration and ninety-nine percent perspiration."
+            android:textColor="#F5454545"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:paddingStart="10dp"
+            android:text="Thomas Edison"
+            android:textColor="#DA454545"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#454545"
+        android:tint="#FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/sharebutton"
+        android:onClick="Onshare"
+        android:src="@drawable/share_24"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/Pervious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/left_24"
+            android:text="Pervious"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:onClick="PerviousButton"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/right_24"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:onClick="NextButton"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
